@@ -86,6 +86,27 @@ document.getElementById('prev').addEventListener('click', () => {
     }
   });
   
+// === Contact Modal Script ===
+const contactBtn = document.getElementById('contact-link');
+const contactModal = document.getElementById('contact-modal');
+const closeBtn = document.querySelector('.close-btn');
+
+contactBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  contactModal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  contactModal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === contactModal) {
+    contactModal.style.display = 'none';
+  }
+});
+
+
  
   
 
