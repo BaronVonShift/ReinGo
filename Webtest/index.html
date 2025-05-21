@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ReinGO Introduction</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#" id="contact-link">Contact Us</a>
+    <a href="#">Info</a>
+  </nav>
+</header>
+
+<!-- Carousel -->
+<div class="carousel">
+
+  <!-- Main image list -->
+  <div class="list">
+    <div class="item">
+      <img src="Images/Prague-final.jpg" />
+      <div class="content">
+        <div class="author">Reindeer Odyssey<sup>™</sup></div>
+        <div class="title">Welcome to ReinGO!</div>
+        <div class="topic">Your next trip starts here. ReinGO is your personal travel fixer - not just another booking site.  
+          Tell us what you're feeling, and we’ll turn that vibe into a trip.  
+          No filters. No guesswork. No nonsense.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="Images/Alps-final.jpg" />
+      <div class="content">
+        <div class="author">Reindeer Odyssey<sup>™</sup></div>
+        <div class="title">Tell me what you want</div>
+        <div class="topic">
+          Where do you want to go?<br>
+          Write anything – a mood, a scene, a dream.<br>
+          We'll figure out the rest.
+        </div>
+    
+        <form class="search-bar" action="https://formspree.io/f/manekyow" method="POST">
+          <input type="hidden" name="_subject" value="New Travel Search Request from ReinGO!" />
+          
+          <input 
+            type="email" 
+            name="_replyto" 
+            placeholder="Your email (so we can reply)" 
+            required 
+          />
+          
+          <input 
+            type="text" 
+            name="trip_request" 
+            placeholder="Describe your dream trip..." 
+            required 
+          />
+        
+          <button type="submit">Search</button>
+        </form>      
+    
+      </div>
+    </div>
+    
+
+  </div> <!-- END .list -->
+
+  <!-- Thumbnails -->
+  <div class="thumbnail">
+
+
+    <div class="item">
+      <img src="Images/Alps-final.jpg" />
+      <div class="content">
+        <div class="title">Where to now?</div>
+        <div class="des"></div>
+      </div>
+    </div>
+
+    <div class="item">
+        <img src="Images/Prague-final.jpg" />
+        <div class="content">
+          <div class="title">Your trip spy</div>
+          <div class="des"></div>
+        </div>
+      </div>
+  </div> <!-- END .thumbnail -->
+
+  <!-- Arrows (outside thumbnails) -->
+  <!-- Move this outside .thumbnail -->
+<div class="arrows">
+    <button id="prev"><</button>
+    <button id="next">></button>
+  </div>
+  
+
+</div> <!-- END .carousel -->
+
+<div id="audio-toggle">
+    <img id="sound-icon" src="Images/tone-on.png" alt="Toggle Sound">
+  </div>
+
+
+
+<script src="app.js"></script>
+<!-- Contact Form Modal -->
+<div id="contact-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="https://formspree.io/f/manekyow" method="POST">
+      <input type="hidden" name="_subject" value="New message from ReinGO!" />
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="_replyto" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>    
+  </div>
+</div>
+</body>
+</html>
